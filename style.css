@@ -91,12 +91,14 @@ select {
   min-width: 185px;
 }
 .brand-mark {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 40px;
   border-radius: 11px;
   background: #171724;
   color: white;
-  display: grid;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
   place-items: center;
   font-family: Manrope, sans-serif;
   font-weight: 800;
@@ -1219,8 +1221,11 @@ select {
     grid-template-columns: 1fr;
     gap: 8px;
   }
+
+ /* Yha Pe hai Wo Code  */
   .about-copy {
-    padding-top: 4px;
+    padding-top: 6px;
+
   }
   .stats-row {
     gap: 7px;
@@ -1310,6 +1315,8 @@ select {
     grid-template-columns: 1fr;
     gap: 25px;
   }
+
+  
   .contact-intro h2 {
     font-size: 35px;
   }
@@ -1335,9 +1342,7 @@ select {
   }
 }
 
-/* ==========================================
-   AKASH SHARMA PORTFOLIO — PREMIUM ANIMATIONS
-========================================== */
+
 
 html {
   scroll-behavior: smooth;
@@ -1707,4 +1712,453 @@ textarea:focus-visible {
     opacity: 1;
     transform: none;
   }
+}
+
+/* ==========================================
+RESPONSIVE PATCH
+Existing design and animations preserved
+========================================== */
+
+/* Tablet and smaller laptops */
+@media (max-width: 1024px) {
+.site-shell {
+width: min(var(--max), calc(100% - 28px));
+}
+
+.hero {
+grid-template-columns: 1fr 0.9fr;
+padding-right: 30px;
+padding-left: 30px;
+}
+
+.hero h1 {
+font-size: clamp(2.8rem, 6vw, 4.5rem);
+overflow-wrap: anywhere;
+}
+
+.hero-visual {
+min-width: 0;
+}
+
+.portrait-frame {
+width: min(88%, 330px);
+}
+
+.experience-card {
+left: -3%;
+}
+
+.quality-card {
+right: -3%;
+}
+
+.about-section {
+grid-template-columns: 0.9fr 1.1fr;
+gap: 20px 30px;
+}
+
+.service-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tech-strip {
+flex-wrap: wrap;
+}
+
+.tech-list {
+justify-content: flex-start;
+}
+
+.project-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.contact-section {
+gap: 30px;
+}
+}
+
+/* Mobile navigation and layout */
+@media (max-width: 650px) {
+html {
+scroll-padding-top: 80px;
+}
+
+.topbar {
+width: calc(100% - 20px);
+gap: 8px;
+}
+
+.brand {
+flex-shrink: 1;
+min-width: 0;
+}
+
+.brand-mark {
+flex-shrink: 0;
+}
+
+.brand-copy {
+min-width: 0;
+}
+
+.brand-copy b,
+.brand-copy small {
+overflow-wrap: anywhere;
+}
+
+.nav-cta {
+flex-shrink: 0;
+gap: 7px;
+padding: 10px;
+}
+
+.menu-toggle {
+flex-shrink: 0;
+min-width: 40px;
+min-height: 40px;
+cursor: pointer;
+}
+
+.nav-links {
+max-height: calc(100dvh - 100px);
+overflow-y: auto;
+}
+
+.site-shell {
+width: calc(100% - 20px);
+}
+
+.hero {
+grid-template-columns: minmax(0, 1fr);
+padding: 28px 20px 18px;
+}
+
+.hero-copy,
+.hero-visual {
+min-width: 0;
+}
+
+.hero h1 {
+font-size: clamp(2.7rem, 13vw, 4.2rem);
+line-height: 1;
+overflow-wrap: anywhere;
+}
+
+.hero h2 {
+font-size: clamp(17px, 5vw, 23px);
+}
+
+.hero-description {
+max-width: 100%;
+}
+
+.hero-actions {
+gap: 10px;
+}
+
+.button {
+max-width: 100%;
+}
+
+.hero-trust {
+gap: 10px 12px;
+}
+
+.hero-visual {
+min-height: 290px;
+margin-top: 12px;
+}
+
+.portrait-frame {
+width: min(76%, 290px);
+height: 290px;
+}
+
+.experience-card {
+left: 0;
+max-width: 45%;
+}
+
+.quality-card {
+right: 0;
+max-width: 48%;
+}
+
+.float-card {
+gap: 7px;
+padding: 9px;
+}
+
+.hero-number {
+right: 0;
+font-size: 22px;
+}
+
+.section-pad {
+padding: 25px 17px;
+}
+
+.about-section,
+.contact-section {
+grid-template-columns: minmax(0, 1fr);
+}
+
+.about-copy {
+max-width: 100%;
+}
+
+.stats-row {
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 7px;
+}
+
+.stat {
+min-width: 0;
+padding: 10px 7px;
+grid-template-columns: minmax(0, 1fr);
+overflow-wrap: anywhere;
+}
+
+.stat-icon {
+grid-row: auto;
+}
+
+.section-heading-row {
+align-items: flex-start;
+flex-direction: column;
+gap: 10px;
+}
+
+.section-heading-row > p {
+max-width: 100%;
+}
+
+.service-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 9px;
+}
+
+.service-card {
+min-width: 0;
+padding: 15px 12px;
+overflow-wrap: anywhere;
+}
+
+.service-card p {
+padding-bottom: 16px;
+}
+
+.tech-strip {
+padding: 18px 15px;
+gap: 15px;
+}
+
+.tech-list {
+width: 100%;
+gap: 7px;
+}
+
+.tech-list > span {
+min-width: 0;
+max-width: 100%;
+padding: 8px;
+overflow-wrap: anywhere;
+}
+
+.project-grid {
+grid-template-columns: minmax(0, 1fr);
+}
+
+.project-card {
+min-width: 0;
+}
+
+.project-preview {
+height: clamp(190px, 58vw, 260px);
+}
+
+.project-meta {
+min-width: 0;
+}
+
+.project-meta > div {
+min-width: 0;
+}
+
+.project-meta h3,
+.project-meta p {
+overflow-wrap: anywhere;
+}
+
+.process-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 9px;
+}
+
+.process-grid article {
+min-width: 0;
+overflow-wrap: anywhere;
+}
+
+.contact-section {
+gap: 24px;
+}
+
+.contact-intro h2 {
+font-size: clamp(28px, 8vw, 35px);
+overflow-wrap: anywhere;
+}
+
+.contact-form {
+min-width: 0;
+padding: 18px 14px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+min-width: 0;
+max-width: 100%;
+}
+
+.footer {
+width: calc(100% - 24px);
+flex-wrap: wrap;
+gap: 12px;
+}
+
+.footer > p {
+width: 100%;
+order: 3;
+}
+}
+
+/* Small mobile screens */
+@media (max-width: 380px) {
+.topbar {
+padding: 8px;
+gap: 6px;
+}
+
+.brand {
+gap: 6px;
+}
+
+.brand-mark {
+width: 34px;
+height: 34px;
+font-size: 14px;
+}
+
+.brand-copy b {
+font-size: 10px;
+}
+
+.brand-copy small {
+font-size: 8px;
+}
+
+.nav-cta {
+padding: 9px 8px;
+font-size: 9px;
+}
+
+.menu-toggle {
+padding: 8px;
+}
+
+.hero {
+padding-right: 15px;
+padding-left: 15px;
+}
+
+.hero h1 {
+font-size: clamp(2.5rem, 12.5vw, 3.1rem);
+}
+
+.hero-visual {
+min-height: 255px;
+}
+
+.portrait-frame {
+width: 75%;
+height: 255px;
+}
+
+.float-card {
+padding: 7px;
+}
+
+.float-card b {
+font-size: 8px;
+}
+
+.float-card small {
+font-size: 7px;
+}
+
+.float-icon {
+width: 24px;
+height: 24px;
+}
+
+.section-pad {
+padding: 22px 13px;
+}
+
+.stats-row {
+gap: 5px;
+}
+
+.stat {
+padding: 8px 5px;
+}
+
+.stat b {
+font-size: 9px;
+}
+
+.stat small {
+font-size: 7px;
+}
+
+.service-card {
+padding: 13px 10px;
+}
+
+.service-card h3 {
+font-size: 11px;
+}
+
+.service-card p {
+font-size: 9px;
+}
+
+.process-grid article {
+padding: 12px 9px;
+}
+
+.project-preview {
+height: 200px;
+}
+}
+
+/* Accessibility: preserve reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+.hero-copy > *,
+.hero-visual,
+.portrait-orbit,
+.experience-card,
+.quality-card,
+.page-glow,
+.scroll-reveal {
+animation: none !important;
+transition: none !important;
+}
+
+.scroll-reveal {
+opacity: 1;
+transform: none;
+}
 }
