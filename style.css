@@ -2115,8 +2115,6 @@ textarea:focus-visible {
   }
 }
 
-
-
 @media (max-width: 1024px) {
   :root {
     --max: 100%;
@@ -2314,4 +2312,3 @@ textarea:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
-
